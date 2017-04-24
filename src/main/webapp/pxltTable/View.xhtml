@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+
+    <ui:composition>
+
+        <p:dialog id="PxltTableViewDlg" widgetVar="PxltTableViewDialog" modal="true" resizable="false" appendTo="@(body)" header="#{bundle.ViewPxltTableTitle}">
+            <h:form id="PxltTableViewForm">
+                <h:panelGroup id="display">
+                    <p:panelGrid columns="2" rendered="#{pxltTableController.selected != null}">
+                        <h:outputText value="#{bundle.ViewPxltTableLabel_pmid}"/>
+                        <h:outputText value="#{pxltTableController.selected.pmid}" title="#{bundle.ViewPxltTableTitle_pmid}"/>
+                        <h:outputText value="#{bundle.ViewPxltTableLabel_toolName}"/>
+                        <h:outputText value="#{pxltTableController.selected.toolName}" title="#{bundle.ViewPxltTableTitle_toolName}"/>
+                        <h:outputText value="#{bundle.ViewPxltTableLabel_toolType}"/>
+                        <h:outputText value="#{pxltTableController.selected.toolType}" title="#{bundle.ViewPxltTableTitle_toolType}"/>
+                        <h:outputText value="#{bundle.ViewPxltTableLabel_interface1}"/>
+                        <h:outputText value="#{pxltTableController.selected.interface1}" title="#{bundle.ViewPxltTableTitle_interface1}"/>
+                        <h:outputText value="#{bundle.ViewPxltTableLabel_publishedYear}"/>
+                        <h:outputText value="#{pxltTableController.selected.publishedYear}" title="#{bundle.ViewPxltTableTitle_publishedYear}"/>
+                        <h:outputText value="#{bundle.ViewPxltTableLabel_scoringFun}"/>
+                        <h:outputText value="#{pxltTableController.selected.scoringFun}" title="#{bundle.ViewPxltTableTitle_scoringFun}"/>
+                        <h:outputText value="#{bundle.ViewPxltTableLabel_MSCleavable}"/>
+                        <h:outputText value="#{pxltTableController.selected.MSCleavable}" title="#{bundle.ViewPxltTableTitle_MSCleavable}"/>
+                        <h:outputText value="#{bundle.ViewPxltTableLabel_labling}"/>
+                        <h:outputText value="#{pxltTableController.selected.labling}" title="#{bundle.ViewPxltTableTitle_labling}"/>
+                        <h:outputText value="#{bundle.ViewPxltTableLabel_decoy}"/>
+                        <h:outputText value="#{pxltTableController.selected.decoy}" title="#{bundle.ViewPxltTableTitle_decoy}"/>
+                        <h:outputText value="#{bundle.ViewPxltTableLabel_devLanguage}"/>
+                        <h:outputText value="#{pxltTableController.selected.devLanguage}" title="#{bundle.ViewPxltTableTitle_devLanguage}"/>
+                        <h:outputText value="#{bundle.ViewPxltTableLabel_availability}"/>
+                        <h:outputText value="#{pxltTableController.selected.availability}" title="#{bundle.ViewPxltTableTitle_availability}"/>
+                        <h:outputText value="#{bundle.ViewPxltTableLabel_webAddress}"/>
+                        <h:outputText value="#{pxltTableController.selected.webAddress}" title="#{bundle.ViewPxltTableTitle_webAddress}"/>
+                    </p:panelGrid>
+                    <p:commandButton value="#{bundle.Close}" onclick="PxltTableViewDialog.hide()"/>
+                </h:panelGroup>
+            </h:form>
+        </p:dialog>
+
+    </ui:composition>
+</html>

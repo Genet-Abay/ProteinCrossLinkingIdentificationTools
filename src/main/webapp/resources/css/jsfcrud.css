@@ -1,0 +1,38 @@
+.ui-widget {
+    font-size: 12px !important;
+}
+.ui-layout-north {
+    z-index: 20 !important;
+    overflow: visible !important;;
+}
+.ui-layout-north .ui-layout-unit-content {
+    overflow: visible !important;
+}
+.ui-widget-header {    
+    height: 40px;
+    font-size: 0.9vw;
+    text-align: center;
+    text-transform: uppercase;
+
+    background: whitesmoke;
+
+
+    /* #000033;*/
+    color: black; /* beige;*/
+}
+.header-site{
+    /* background: white url(small_CompOmics_logo.png) 100% 100% no-repeat; */
+}
+.ui-button {
+    margin-top: 10px !important;
+}
+.customPanel .ui-panel-titlebar {
+    color: black;
+    background-color: white;
+}
+
+
+.customFooter{
+    color: black;
+    background-color: white;
+}
