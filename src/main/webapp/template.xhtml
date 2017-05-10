@@ -1,32 +1,64 @@
 <?xml version='1.0' encoding='UTF-8' ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
-      xmlns:h="http://xmlns.jcp.org/jsf/html"
-      xmlns:p="http://primefaces.org/ui">
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:p="http://primefaces.org/ui">
 
-    <h:head>
-        <title><ui:insert name="title">List of Tools</ui:insert></title>
-        <h:outputStylesheet library="css" name="jsfcrud.css"/>
-        <h:outputScript library="js" name="jsfcrud.js"/>
-    </h:head>
+<h:head>
+	<title><ui:insert name="title">List of Tools</ui:insert></title>
+	<h:outputStylesheet library="css" name="jsfcrud.css" />
+	<h:outputScript library="js" name="jsfcrud.js" />
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet"
+		href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+	<h:outputStylesheet library="css" name="custom.css" />
+	<!-- Latest compiled and minified JavaScript -->
+	<script
+		src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script
+		src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+</h:head>
 
-    <h:body>
-
-        <p:growl id="growl" life="3000" />
-
-        <p:layout fullPage="true">
-           
-            <p:layoutUnit position="south" size="60">
-                <ui:insert name="footer"/>
-            </p:layoutUnit>
-
-            <p:layoutUnit position="center">
-                <ui:insert name="body"/>
-            </p:layoutUnit>
-
-        </p:layout>
-
-    </h:body>
+<h:body>
+	<div class="container">
+		<ui:insert name="header">
+			<ui:include src="header.xhtml" />
+		</ui:insert>
+		<!-- you can fill here -->
+		<div class="jumbotron">
+			<div class="col-sm-6 col-sm-offset-3">
+				<div class="panel panel-default" style="display: block;">
+					<div class="panel-heading panel-heading-custom text-center">
+						<h3 class="panel-title">LOGIN</h3>
+					</div>
+					<div class="panel-body">
+						<div class="row">
+							<br />
+							<div class="input-group input-group-lg col-sm-10 col-sm-offset-1">
+								<input type="text" class="form-control"
+									placeholder="Username" id="username"/>
+							</div>
+							<br />
+							<div class="input-group input-group-lg col-sm-10 col-sm-offset-1">
+								<input type="password" class="form-control" placeholder="Password"
+									id="password"/>
+							</div>
+							<br />
+							<div align="center">
+								<button type="button" class="btn btn-primary "
+									id="btnLogin" style="width: 104px;">Login</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- up to here.. -->
+		<ui:insert name="footer">
+			<ui:include src="footer.xhtml" />
+		</ui:insert>
+	</div>
+</h:body>
 
 </html>
